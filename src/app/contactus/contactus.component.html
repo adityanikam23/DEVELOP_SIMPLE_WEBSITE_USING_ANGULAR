@@ -1,0 +1,68 @@
+<h1 class="text-uppercase mt-2 bg-info text-white text-center">registration form</h1>
+
+<div class="maindiv shadow-lg">
+
+    <label>first name:</label><br>
+
+    <input [(ngModel)]="input1" type="text" class="shadow-lg p-2" placeholder="please enter your first name" ><br><br>
+
+    <label>middle name:</label><br>
+
+    <input [(ngModel)]="input2" type="text" class="shadow-lg p-2" placeholder="please enter your middle name" ><br><br>
+
+    <label>last name:</label><br>
+
+    <input [(ngModel)]="input3" type="text" class="shadow-lg  p-2" placeholder="please enter your last name" ><br><br>
+
+    <label>email address:</label><br>
+
+    <input [(ngModel)]="input4" type="text" class="shadow-lg p-2" placeholder="please enter your email address" ><br><br>
+
+    <label>mobile no:</label><br>
+
+    <input [(ngModel)]="input5" type="text" class="shadow-lg p-2" placeholder="please enter your mobile no" ><br><br>
+
+    <label>city:</label><br>
+
+    <input [(ngModel)]="input6" type="text" class="shadow-lg p-2" placeholder="please enter your city" ><br><br>
+
+    <label>state:</label><br>
+
+    <input [(ngModel)]="input7" type="text" class="shadow-lg p-2" placeholder="please enter your state" ><br><br>
+
+    <label>nationality:</label><br>
+
+    <input [(ngModel)]="input8" type="text" class="shadow-lg p-2" placeholder="please enter your nationality" ><br><br>
+
+    <button type="submit" (click)="clicked()" class="btn btn-outline-primary">register</button>
+</div>
+<br><br><br>
+
+<div>
+    <table class="table table-bordered table-hover table-dark">
+        <thead>
+            <tr>
+                <th>first name</th>
+                <th>middle name</th>
+                <th>last name</th>
+                <th>email address</th>
+                <th>mobile no</th>
+                <th>city</th>
+                <th>state</th>
+                <th>nationality</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let allinput of records">
+                <td>{{allinput.first}}</td>
+                <td>{{allinput.middle}}</td>
+                <td>{{allinput.last}}</td>
+                <td>{{allinput.email}}</td>
+                <td>{{allinput.mob}}</td>
+                <td>{{allinput.city}}</td>
+                <td>{{allinput.state}}</td>
+                <td>{{allinput.nation}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
